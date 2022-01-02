@@ -18,7 +18,7 @@ export default class GameOfLife {
         for (let x = 0; x < this.width; ++x) {
             this.cells[x] = new Array(this.height);
             for (let y = 0; y < this.height; ++y) {
-                this.cells[x][y] = new Cell(x, y, Math.random() < 0.1);
+                this.cells[x][y] = new Cell(x, y, Math.random() < 0.5);
             }
         }
 
