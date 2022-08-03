@@ -26,9 +26,11 @@ export default class GameOfLife {
     }
 
     update() {
-        const newCells = this.cells;
+        const newCells = [];
 
         for (let x = 0; x < this.width; ++x) {
+            newCells[x] = new Array(this.height);
+            
             for (let y = 0; y < this.height; ++y) {
                 const cell = this.cells[x][y];
                 const neighbors = this.#getNeighbors(cell);
